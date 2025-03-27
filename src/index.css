@@ -1,0 +1,129 @@
+/** lato font medium,bold */
+
+@font-face {
+  font-family: "Lato";
+  src: url("./fonts/Lato/Lato-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("./fonts/Lato/Lato-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/** inter font regular,medium,semibold  */
+
+@font-face {
+  font-family: "Inter";
+  src: url("./fonts/inter/Inter_Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./fonts/inter/Inter_Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./fonts/inter/Inter_SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+/** tailwind css import */
+@import "tailwindcss";
+
+/* css variables */
+:root {
+  --primary-blue: #002e72;
+  --primary-green: #005633;
+  --primary-gold: #ad8400;
+  --white: #ffffff;
+  --black: #000000;
+  --secondary-dark-blue: #002549;
+  --secondary-medium-blue: #0764bf;
+  --secondary-light-blue: #0090ff;
+  --secondary-very-light-blue: #5ab0ff;
+  --secondary-dark-green: #003424;
+  --secondary-medium-green: #008c59;
+  --secondary-light-green: #05d986;
+  --secondary-very-light-green: #5be3aa;
+  --secondary-dark-gold: #624b02;
+  --secondary-medium-gold: #967200;
+  --secondary-light-gold: #dba600;
+  --secondary-very-light-gold: #e9cd75;
+  --gradient-from-blue: #0764bf;
+  --gradient-to-blue: #002e72;
+  --gradient-from-green: #005633;
+  --gradient-to-green: #008c59;
+  --gradient-from-gold: #ad8400;
+  --gradient-to-gold: #e9cd75;
+}
+
+@theme {
+  /* fonts */
+  --font-inter: Inter, "sans-serif";
+  --font-lato: Lato, "sans-serif";
+
+  /* colors */
+  --color-primary-blue: var(--primary-blue);
+  --color-primary-green: var(--primary-green);
+  --color-primary-gold: var(--primary-gold);
+  --color-white: var(--white);
+  --color-black: var(--black);
+  --color-secondary-dark-blue: var(--secondary-dark-blue);
+  --color-secondary-medium-blue: var(--secondary-medium-blue);
+  --color-secondary-light-blue: var(--secondary-light-blue);
+  --color-secondary-very-light-blue: var(--secondary-very-light-blue);
+  --color-secondary-dark-green: var(--secondary-dark-green);
+  --color-secondary-medium-green: var(--secondary-medium-green);
+  --color-secondary-light-green: var(--secondary-light-green);
+  --color-secondary-very-light-green: var(--secondary-very-light-green);
+  --color-secondary-dark-gold: var(--secondary-dark-gold);
+  --color-secondary-medium-gold: var(--secondary-medium-gold);
+  --color-secondary-light-gold: var(--secondary-light-gold);
+  --color-secondary-very-light-gold: var(--secondary-very-light-gold);
+  --color-gradient-from-blue: var(--gradient-from-blue);
+  --color-gradient-to-blue: var(--gradient-to-blue);
+  --color-gradient-from-green: var(--gradient-from-green);
+  --color-gradient-to-green: var(--gradient-to-green);
+  --color-gradient-from-gold: var(--gradient-from-gold);
+  --color-gradient-to-gold: var(--gradient-to-gold);
+}
+
+@layer base {
+  h1 {
+    @apply font-lato font-bold text-[80px] leading-[135%] tracking-normal;
+  }
+
+  h2 {
+    @apply font-lato font-bold text-[40px]  leading-[135%] tracking-normal;
+  }
+
+  h3 {
+    @apply font-lato font-medium text-[36px] leading-[135%] tracking-normal;
+  }
+
+  h4 {
+    @apply font-lato font-medium text-[32px] leading-[135%] tracking-normal;
+  }
+
+  h5 {
+    @apply font-inter font-semibold text-[24px] leading-[150%] tracking-normal;
+  }
+
+  body {
+    @apply font-inter font-normal leading-[150%] tracking-normal;
+  }
+
+  button {
+    @apply font-inter font-medium text-base leading-none tracking-normal;
+  }
+}

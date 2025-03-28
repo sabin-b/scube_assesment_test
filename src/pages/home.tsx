@@ -1,6 +1,8 @@
 import { IoIosCheckmarkCircleOutline } from "react-icons/io";
 import { Link } from "react-router-dom";
 import ImageBox from "../components/ui/ImageBox";
+import ListItemImageBox from "../components/ui/ListItemImageBox";
+import { imageBoxData, listItemImageBoxData } from "../data/data";
 
 export default function Home() {
   return (
@@ -33,25 +35,13 @@ export default function Home() {
       <section className="z-20 relative">
         <div className="container px-6 xl:px-0 max-w-7xl mx-auto -mt-[90px]">
           <div className="grid grid-cols-1 gap-y-8 md:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:gap-x-8 xl:gap-x-12">
-            <ImageBox
-              imageUrl="/images/investments_image_box_1.png"
-              imageAltText="investments"
-              description="We are driven by the belief that investment can make a positive impact - without compromising returns."
-            />
-            <ImageBox
-              imageUrl="/images/investment_Network_image_box_2.png"
-              imageAltText="investment network"
-              description="Connects institutional scale impact
-investors, to benefit from collaboration
-in often opaque private markets."
-            />
-            <ImageBox
-              imageUrl="/images/technical_Assistance_image_box_3.png"
-              imageAltText="technical assistance"
-              description="Helps sub-scale fund managers expand
-capacity and grow assests under
-management."
-            />
+            {imageBoxData.map(({ imageUrl, imageAltText, description }) => (
+              <ImageBox
+                imageUrl={imageUrl}
+                imageAltText={imageAltText}
+                description={description}
+              />
+            ))}
           </div>
         </div>
       </section>
@@ -122,13 +112,17 @@ management."
         <div className="container px-6 xl:px-0 max-w-7xl mx-auto">
           <div className="grid grid-cols-1 gap-y-8  lg:grid-cols-2 lg:gap-x-8 xl:gap-x-12">
             {/* image wrapper */}
-            <div className="relative">
-              <div>
-                <img src="/images/farmer.webp" alt="" />
+            <div className="relative w-full h-full">
+              <div className="w-full h-full">
+                <img
+                  className="w-full h-full object-cover rounded-image"
+                  src="/images/farmer.webp"
+                  alt="farmer"
+                />
               </div>
             </div>
             {/* content area */}
-            <div className="flex flex-col items-start gap-y-6 xl:gap-8">
+            <div className="flex flex-col items-start gap-y-6 xl:gap-y-8">
               <div className="flex flex-col gap-y-4">
                 <h2 className="text-white">What we do at high level</h2>
                 <p className="text-b1 text-white">
@@ -138,15 +132,10 @@ management."
                   text of the printing and typesetting industry.
                 </p>
               </div>
-              <ul className="space-y-4">
-                <li className="flex flex-row gap-x-8">
-                  {/* image */}
-                  <div>
-                    <img src="/images/financial-growth.png" alt="" />
-                  </div>
-                  {/* text */}
-                  <div></div>
-                </li>
+              <ul className="space-y-5 w-full">
+                {listItemImageBoxData.map((data) => (
+                  <ListItemImageBox {...data} />
+                ))}
               </ul>
             </div>
           </div>

@@ -74,6 +74,8 @@
   --image-radius: 1rem;
   --imageBox-radius: 1rem;
   --iconBox-radius: 1rem;
+
+  --border-gray: #e2e8f0;
 }
 
 @theme {
@@ -113,6 +115,9 @@
   --color-gradient-to-green: var(--gradient-to-green);
   --color-gradient-from-gold: var(--gradient-from-gold);
   --color-gradient-to-gold: var(--gradient-to-gold);
+
+  /* border color */
+  --color-theme-border-gray: var(--border-gray);
 }
 
 @layer base {
@@ -146,21 +151,19 @@
 }
 
 @layer components {
-  .btn-link {
-    @apply bg-secondary-light-blue hover:bg-secondary-medium-blue text-white py-4 px-6 rounded-button transition-colors duration-100 font-inter font-medium text-base leading-none tracking-normal;
-  }
-
-  .btn-link-outline {
-    @apply bg-transparent border border-primary-blue hover:border-secondary-medium-blue hover:bg-secondary-medium-blue text-primary-blue hover:text-white py-4 px-6 rounded-button transition-colors duration-100 font-inter font-medium text-base leading-none tracking-normal;
-  }
-}
-
-@layer utilities {
   .text-b1 {
     @apply font-inter  text-lg leading-[150%] font-normal tracking-normal;
   }
 
   .text-b2 {
     @apply font-inter font-medium text-base leading-[150%] tracking-normal;
+  }
+
+  .btn-link {
+    @apply bg-secondary-light-blue hover:bg-secondary-medium-blue text-white py-4 px-6 rounded-button transition-colors duration-100 font-inter font-medium text-base leading-none tracking-normal;
+  }
+
+  .btn-link-outline {
+    @apply bg-transparent border border-primary-blue hover:border-secondary-medium-blue hover:bg-secondary-medium-blue text-primary-blue hover:text-white py-4 px-6 rounded-button transition-colors duration-100 font-inter font-medium text-base leading-none tracking-normal;
   }
 }

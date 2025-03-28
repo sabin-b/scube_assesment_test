@@ -1,6 +1,23 @@
+import { Suspense } from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Home from "./pages/home";
+
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Home />,
+    },
+    {
+      path: "*",
+      element: <div>hello my dear error</div>,
+    },
+  ]);
+
   return (
-    <div className="text-white bg-primary-gold font-inter font-medium">app</div>
+    <Suspense>
+      <RouterProvider router={router} />
+    </Suspense>
   );
 }
 

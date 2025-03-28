@@ -42,6 +42,7 @@
 
 /* css variables */
 :root {
+  /* colors */
   --primary-blue: #002e72;
   --primary-green: #005633;
   --primary-gold: #ad8400;
@@ -61,16 +62,34 @@
   --secondary-very-light-gold: #e9cd75;
   --gradient-from-blue: #0764bf;
   --gradient-to-blue: #002e72;
+  --gradient-from-dark-blue: #02051d;
+  --gradient-to-dark-blue: #02051d;
   --gradient-from-green: #005633;
   --gradient-to-green: #008c59;
   --gradient-from-gold: #ad8400;
   --gradient-to-gold: #e9cd75;
+
+  /* border radius */
+  --button-radius: 0.5rem;
+  --image-radius: 1rem;
+  --imageBox-radius: 1rem;
+
+  /* body text */
+  --text-body-b1: 1.125rem;
 }
 
 @theme {
   /* fonts */
   --font-inter: Inter, "sans-serif";
   --font-lato: Lato, "sans-serif";
+
+  /* radius */
+  --radius-button: var(--button-radius);
+  --radius-image: var(--image-radius);
+  --radius-imageBox: var(--imageBox-radius);
+
+  /* body */
+  --text-b1: var(--text-body-b1);
 
   /* colors */
   --color-primary-blue: var(--primary-blue);
@@ -92,6 +111,8 @@
   --color-secondary-very-light-gold: var(--secondary-very-light-gold);
   --color-gradient-from-blue: var(--gradient-from-blue);
   --color-gradient-to-blue: var(--gradient-to-blue);
+  --color-gradient-from-dark-blue: var(--gradient-from-dark-blue);
+  --color-gradient-to-dark-blue: var(--gradient-to-dark-blue);
   --color-gradient-from-green: var(--gradient-from-green);
   --color-gradient-to-green: var(--gradient-to-green);
   --color-gradient-from-gold: var(--gradient-from-gold);
@@ -100,7 +121,7 @@
 
 @layer base {
   h1 {
-    @apply font-lato font-bold text-[80px] leading-[135%] tracking-normal;
+    @apply font-lato font-bold text-[35px] md:text-[50px] lg:text-[60px] xl:text-[80px] leading-[135%] tracking-normal;
   }
 
   h2 {
@@ -119,11 +140,31 @@
     @apply font-inter font-semibold text-[24px] leading-[150%] tracking-normal;
   }
 
+  p {
+    @apply text-black text-base font-inter font-normal leading-[150%] tracking-normal;
+  }
+
   body {
     @apply font-inter font-normal leading-[150%] tracking-normal;
   }
 
   button {
     @apply font-inter font-medium text-base leading-none tracking-normal;
+  }
+}
+
+@layer components {
+  .button-link {
+    @apply bg-secondary-light-blue hover:bg-secondary-medium-blue text-white py-2.5 xl:py-3 px-6 rounded-button transition-colors duration-100;
+  }
+}
+
+@layer utilities {
+  .container {
+    @apply container px-6 xl:px-0 max-w-7xl mx-auto;
+  }
+
+  .text-b1 {
+    @apply text-xl;
   }
 }

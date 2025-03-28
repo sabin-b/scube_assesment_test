@@ -2,14 +2,14 @@
 
 @font-face {
   font-family: "Lato";
-  src: url("./fonts/Lato/Lato-Regular.ttf") format("truetype");
+  src: url("/fonts/Lato/Lato-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Lato";
-  src: url("./fonts/Lato/Lato-Bold.ttf") format("truetype");
+  src: url("/fonts/Lato/Lato-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
@@ -18,21 +18,21 @@
 
 @font-face {
   font-family: "Inter";
-  src: url("./fonts/inter/Inter_Regular.ttf") format("truetype");
+  src: url("/fonts/inter/Inter_Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Inter";
-  src: url("./fonts/inter/Inter_Medium.ttf") format("truetype");
+  src: url("/fonts/inter/Inter_Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Inter";
-  src: url("./fonts/inter/Inter_SemiBold.ttf") format("truetype");
+  src: url("/fonts/inter/Inter_SemiBold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
 }
@@ -73,9 +73,7 @@
   --button-radius: 0.5rem;
   --image-radius: 1rem;
   --imageBox-radius: 1rem;
-
-  /* body text */
-  --text-body-b1: 1.125rem;
+  --iconBox-radius: 1rem;
 }
 
 @theme {
@@ -87,9 +85,7 @@
   --radius-button: var(--button-radius);
   --radius-image: var(--image-radius);
   --radius-imageBox: var(--imageBox-radius);
-
-  /* body */
-  --text-b1: var(--text-body-b1);
+  --radius-iconBox: var(--iconBox-radius);
 
   /* colors */
   --color-primary-blue: var(--primary-blue);
@@ -125,11 +121,11 @@
   }
 
   h2 {
-    @apply font-lato font-bold text-[40px]  leading-[135%] tracking-normal;
+    @apply font-lato font-bold text-[30px] md:text-[40px]  leading-[135%] tracking-normal;
   }
 
   h3 {
-    @apply font-lato font-medium text-[36px] leading-[135%] tracking-normal;
+    @apply font-lato font-medium text-4xl leading-[135%] tracking-normal;
   }
 
   h4 {
@@ -137,15 +133,11 @@
   }
 
   h5 {
-    @apply font-inter font-semibold text-[24px] leading-[150%] tracking-normal;
-  }
-
-  p {
-    @apply text-black text-base font-inter font-normal leading-[150%] tracking-normal;
+    @apply font-inter font-semibold text-2xl leading-[150%] tracking-normal;
   }
 
   body {
-    @apply font-inter font-normal leading-[150%] tracking-normal;
+    @apply font-inter text-base font-normal leading-[150%] tracking-normal;
   }
 
   button {
@@ -154,17 +146,21 @@
 }
 
 @layer components {
-  .button-link {
-    @apply bg-secondary-light-blue hover:bg-secondary-medium-blue text-white py-2.5 xl:py-3 px-6 rounded-button transition-colors duration-100;
+  .btn-link {
+    @apply bg-secondary-light-blue hover:bg-secondary-medium-blue text-white py-4 px-6 rounded-button transition-colors duration-100 font-inter font-medium text-base leading-none tracking-normal;
+  }
+
+  .btn-link-outline {
+    @apply bg-transparent border border-primary-blue hover:border-secondary-medium-blue hover:bg-secondary-medium-blue text-primary-blue hover:text-white py-4 px-6 rounded-button transition-colors duration-100 font-inter font-medium text-base leading-none tracking-normal;
   }
 }
 
 @layer utilities {
-  .container {
-    @apply container px-6 xl:px-0 max-w-7xl mx-auto;
+  .text-b1 {
+    @apply font-inter  text-lg leading-[150%] font-normal tracking-normal;
   }
 
-  .text-b1 {
-    @apply text-xl;
+  .text-b2 {
+    @apply font-inter font-medium text-base leading-[150%] tracking-normal;
   }
 }

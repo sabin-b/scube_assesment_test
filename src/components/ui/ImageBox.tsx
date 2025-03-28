@@ -18,7 +18,7 @@ function ImageBox({ imageUrl, imageAltText, description }: IImageBoxProps) {
         </div>
         {/* text area */}
         <div>
-          <p>{description}</p>
+          <p className="text-b2 text-black">{description}</p>
         </div>
       </div>
     </div>

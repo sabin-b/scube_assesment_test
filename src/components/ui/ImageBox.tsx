@@ -2,7 +2,7 @@ import { IImageBoxProps } from "../../types/types";
 
 function ImageBox({ imageUrl, imageAltText, description }: IImageBoxProps) {
   return (
-    <div className="bg-white p-6 lg:p-8 rounded-imageBox border border-theme-border-gray shadow">
+    <div className="bg-white p-6 lg:p-8 rounded-imageBox border border-theme-border-gray shadow-image-box">
       <div className="flex flex-col gap-y-4">
         {/* image wrapper */}
         <div className="w-full max-w-[200px] lg:max-w-[230px] h-auto">

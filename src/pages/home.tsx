@@ -1,8 +1,14 @@
 import { IoIosCheckmarkCircleOutline } from "react-icons/io";
 import { Link } from "react-router-dom";
+import GradientCardSection from "../components/GradientCardSection";
+import FloatingImageBox from "../components/ui/FloatingImageBox";
 import ImageBox from "../components/ui/ImageBox";
 import ListItemImageBox from "../components/ui/ListItemImageBox";
-import { imageBoxData, listItemImageBoxData } from "../data/data";
+import {
+  floatingImageBoxData,
+  imageBoxData,
+  listItemImageBoxData,
+} from "../data/data";
 
 export default function Home() {
   return (
@@ -108,17 +114,28 @@ export default function Home() {
       {/* third section */}
 
       {/* fourth section */}
-      <section className="py-[100px] bg-primary-blue">
-        <div className="container px-6 xl:px-0 max-w-7xl mx-auto">
+      <section className="py-[100px] bg-secondary-dark-blue relative z-0">
+        <div className="absolute inset-0 w-full h-full bg-[url(/images/fourth_section_bg.png)] bg-no-repeat bg-left-bottom"></div>
+        <div className="container relative z-10 px-6 xl:px-0 max-w-7xl mx-auto">
           <div className="grid grid-cols-1 gap-y-8  lg:grid-cols-2 lg:gap-x-8 xl:gap-x-12">
             {/* image wrapper */}
-            <div className="relative w-full h-full">
-              <div className="w-full h-full">
+            <div className="relative z-0 w-full min-h-[480px] lg:min-h-fit h-full">
+              <div className="w-full -z-1 absolute inset-0 h-full">
+                <div className="inset-0 absolute w-full h-full bg-overlay-blue/18 rounded-image"></div>
                 <img
                   className="w-full h-full object-cover rounded-image"
                   src="/images/farmer.webp"
                   alt="farmer"
                 />
+              </div>
+              <div className="absolute z-10 inset-0 -ml-2.5 w-full h-full">
+                <div className="w-full h-full flex flex-col justify-end pb-10">
+                  <ul className="space-y-6 lg:space-y-8">
+                    {floatingImageBoxData.map((data) => (
+                      <FloatingImageBox {...data} />
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
             {/* content area */}
@@ -142,6 +159,125 @@ export default function Home() {
         </div>
       </section>
       {/* fourth section / */}
+
+      {/* fifth section */}
+      <section className="py-[100px] bg-theme-gray">
+        <div className="container relative z-10 px-6 xl:px-0 max-w-7xl mx-auto">
+          <div className="flex flex-col gap-y-8">
+            <h2 className="text-primary-blue">
+              Capital growth that benefits people and planet
+            </h2>
+            <div className="flex flex-col gap-y-[100px]">
+              <GradientCardSection
+                headerImageUrl="/images/fifth_section_investments.png"
+                headerImageAltText="investments"
+                bodyImageUrl="/images/fifth_section_card_1.webp"
+                bodyImageAltText="buildings"
+              >
+                <p className="text-b2 text-secondary-medium-blue">
+                  Impactable Investment
+                </p>
+                <h3 className="text-primary-blue font-bold">
+                  Institutional scale Impact Investment
+                </h3>
+                <p className="text-b2 text-black">
+                  Many institutional investors want to increase the
+                  environmental and social impact of their portfolio, but
+                  struggle to find investment opportunities – typically because
+                  they are too small.
+                </p>
+                <p className="text-b2 text-black">
+                  Impactable Investment Group is designing institutional scale
+                  solutions to overcome these challenges. We believe that
+                  investment aggregation is a helpful method for investors
+                  seeking to access financial-first, private market impact
+                  investments. This can benefit from lower risk through
+                  diversification, lower costs through scale, and improved
+                  return and impact through greater access.
+                </p>
+                <p className="text-b2 text-black">
+                  Impactable is currently focused on private debt and private
+                  equity investment opportunities in Emerging Markets (EM) that
+                  generate significant returns, whilst also addressing
+                  significant challenges for people at the bottom of the
+                  pyramid.
+                </p>
+              </GradientCardSection>
+              <GradientCardSection
+                headerImageUrl="/images/fifth_section_investments.png"
+                headerImageAltText="investments"
+                bodyImageUrl="/images/fifth_section_card_1.webp"
+                bodyImageAltText="buildings"
+              >
+                <p className="text-b2 text-secondary-medium-blue">
+                  Impactable Investment
+                </p>
+                <h3 className="text-primary-blue font-bold">
+                  Institutional scale Impact Investment
+                </h3>
+                <p className="text-b2 text-black">
+                  Many institutional investors want to increase the
+                  environmental and social impact of their portfolio, but
+                  struggle to find investment opportunities – typically because
+                  they are too small.
+                </p>
+                <p className="text-b2 text-black">
+                  Impactable Investment Group is designing institutional scale
+                  solutions to overcome these challenges. We believe that
+                  investment aggregation is a helpful method for investors
+                  seeking to access financial-first, private market impact
+                  investments. This can benefit from lower risk through
+                  diversification, lower costs through scale, and improved
+                  return and impact through greater access.
+                </p>
+                <p className="text-b2 text-black">
+                  Impactable is currently focused on private debt and private
+                  equity investment opportunities in Emerging Markets (EM) that
+                  generate significant returns, whilst also addressing
+                  significant challenges for people at the bottom of the
+                  pyramid.
+                </p>
+              </GradientCardSection>
+              <GradientCardSection
+                headerImageUrl="/images/fifth_section_investments.png"
+                headerImageAltText="investments"
+                bodyImageUrl="/images/fifth_section_card_1.webp"
+                bodyImageAltText="buildings"
+              >
+                <p className="text-b2 text-secondary-medium-blue">
+                  Impactable Investment
+                </p>
+                <h3 className="text-primary-blue font-bold">
+                  Institutional scale Impact Investment
+                </h3>
+                <p className="text-b2 text-black">
+                  Many institutional investors want to increase the
+                  environmental and social impact of their portfolio, but
+                  struggle to find investment opportunities – typically because
+                  they are too small.
+                </p>
+                <p className="text-b2 text-black">
+                  Impactable Investment Group is designing institutional scale
+                  solutions to overcome these challenges. We believe that
+                  investment aggregation is a helpful method for investors
+                  seeking to access financial-first, private market impact
+                  investments. This can benefit from lower risk through
+                  diversification, lower costs through scale, and improved
+                  return and impact through greater access.
+                </p>
+                <p className="text-b2 text-black">
+                  Impactable is currently focused on private debt and private
+                  equity investment opportunities in Emerging Markets (EM) that
+                  generate significant returns, whilst also addressing
+                  significant challenges for people at the bottom of the
+                  pyramid.
+                </p>
+              </GradientCardSection>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* fifth section / */}
     </main>
   );
 }

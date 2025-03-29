@@ -7,7 +7,7 @@ export default function ListItemImageBox({
   description,
 }: IListItemImageBoxProps) {
   return (
-    <li className="bg-white rounded-imageBox border border-theme-border-gray shadow p-6 w-full">
+    <li className="bg-white rounded-imageBox shadow-listItem-imagebox border border-theme-border-gray  p-6 w-full">
       <div className="flex flex-row items-center gap-x-6 md:gap-x-8 xl:gap-x-12">
         {/* image */}
         <div className="max-w-[70px] max-h-[70px] w-full h-full">

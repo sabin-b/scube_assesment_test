@@ -1,4 +1,8 @@
-import { IImageBoxProps, IListItemImageBoxProps } from "../types/types";
+import {
+  IFloatingImageBoxProps,
+  IImageBoxProps,
+  IListItemImageBoxProps,
+} from "../types/types";
 
 // data for second section
 export const imageBoxData: IImageBoxProps[] = [
@@ -32,21 +36,45 @@ export const listItemImageBoxData: IListItemImageBoxProps[] = [
     description: "Positively impacting lives at the bottom of the pyramid",
   },
   {
-    imageUrl: "/images/financial-growth.png",
-    imageAltText: "financial-growth",
+    imageUrl: "/images/managed_risk.png",
+    imageAltText: "managed_risk",
     title: "Managed Risk",
     description: "Low simulated drawdowns Principal Protection Solution",
   },
   {
-    imageUrl: "/images/financial-growth.png",
-    imageAltText: "financial-growth",
+    imageUrl: "/images/competitive_returns.png",
+    imageAltText: "competitive_returns",
     title: "Competitive Returns",
     description: "Financial-first, targeting competitive net returns",
   },
   {
-    imageUrl: "/images/financial-growth.png",
-    imageAltText: "financial-growth",
+    imageUrl: "/images/investment_at_scale.png",
+    imageAltText: "investment_at_scale",
     title: "Investment at Scale",
     description: "Over $1bn capacity",
+  },
+];
+
+// data for fourth section iconboxdata
+export const floatingImageBoxData: IFloatingImageBoxProps[] = [
+  {
+    imageUrl: "/images/save-money.png",
+    imageAltText: "save money",
+    description: "Attractive Returns",
+  },
+  {
+    imageUrl: "/images/save-the-world.png",
+    imageAltText: "save the world",
+    description: "Positive Impact",
+  },
+  {
+    imageUrl: "/images/power.png",
+    imageAltText: "power",
+    description: "Sufficient Capacity",
+  },
+  {
+    imageUrl: "/images/statistics.png",
+    imageAltText: "statistics",
+    description: "Minimal Drawdowns",
   },
 ];

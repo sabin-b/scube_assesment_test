@@ -75,7 +75,14 @@
   --imageBox-radius: 1rem;
   --iconBox-radius: 1rem;
 
+  /* border color */
   --border-gray: #e2e8f0;
+
+  /* fourth section image overlay color */
+  --overlay-blue: #003c73;
+
+  /* fifth section */
+  --bg-theme-gray: #f8fafc;
 }
 
 @theme {
@@ -118,6 +125,17 @@
 
   /* border color */
   --color-theme-border-gray: var(--border-gray);
+
+  /* fourth section image overlay color */
+  --color-overlay-blue: var(--overlay-blue);
+
+  /* fifth section */
+  --color-theme-gray: var(--bg-theme-gray);
+
+  /* boxshadow */
+  --shadow-floating-imagebox: 0 24 54 0 #0000008c/55%;
+  --shadow-listItem-imagebox: 0 4 4 -1 #0C0C0D0D/5%;
+  --shadow-image-box: 0 4 4 -1 #0C0C0D0D/5%;
 }
 
 @layer base {
@@ -130,7 +148,7 @@
   }
 
   h3 {
-    @apply font-lato font-medium text-4xl leading-[135%] tracking-normal;
+    @apply font-lato font-medium text-[26px] md:text-4xl leading-[135%] tracking-normal;
   }
 
   h4 {

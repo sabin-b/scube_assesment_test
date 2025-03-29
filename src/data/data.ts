@@ -1,4 +1,5 @@
 import {
+  BlogCardProps,
   IFloatingImageBoxProps,
   IImageBoxProps,
   IListItemImageBoxProps,
@@ -7,19 +8,19 @@ import {
 // data for second section
 export const imageBoxData: IImageBoxProps[] = [
   {
-    imageUrl: "/images/investments_image_box_1.png",
+    imageUrl: "/images/home/second_section/investments.png",
     imageAltText: "investments",
     description:
       "We are driven by the belief that investment can make a positive impact - without compromising returns.",
   },
   {
-    imageUrl: "/images/investment_Network_image_box_2.png",
+    imageUrl: "/images/home/second_section/investment_Network.png",
     imageAltText: "investment network",
     description:
       "Connects institutional scale impact investors, to benefit from collaboration in often opaque private markets.",
   },
   {
-    imageUrl: "/images/technical_Assistance_image_box_3.png",
+    imageUrl: "/images/home/second_section/technical_Assistance.png",
     imageAltText: "technical assistance",
     description:
       "Helps sub-scale fund managers expand capacity and grow assests under management.",
@@ -30,25 +31,25 @@ export const imageBoxData: IImageBoxProps[] = [
 
 export const listItemImageBoxData: IListItemImageBoxProps[] = [
   {
-    imageUrl: "/images/financial-growth.png",
+    imageUrl: "/images/home/fourth_section/financial-growth.png",
     imageAltText: "financial-growth",
     title: "High Impact",
     description: "Positively impacting lives at the bottom of the pyramid",
   },
   {
-    imageUrl: "/images/managed_risk.png",
+    imageUrl: "/images/home/fourth_section/managed_risk.png",
     imageAltText: "managed_risk",
     title: "Managed Risk",
     description: "Low simulated drawdowns Principal Protection Solution",
   },
   {
-    imageUrl: "/images/competitive_returns.png",
+    imageUrl: "/images/home/fourth_section/competitive_returns.png",
     imageAltText: "competitive_returns",
     title: "Competitive Returns",
     description: "Financial-first, targeting competitive net returns",
   },
   {
-    imageUrl: "/images/investment_at_scale.png",
+    imageUrl: "/images/home/fourth_section/investment_at_scale.png",
     imageAltText: "investment_at_scale",
     title: "Investment at Scale",
     description: "Over $1bn capacity",
@@ -58,23 +59,43 @@ export const listItemImageBoxData: IListItemImageBoxProps[] = [
 // data for fourth section iconboxdata
 export const floatingImageBoxData: IFloatingImageBoxProps[] = [
   {
-    imageUrl: "/images/save-money.png",
+    imageUrl: "/images/home/fourth_section/save-money.png",
     imageAltText: "save money",
     description: "Attractive Returns",
   },
   {
-    imageUrl: "/images/save-the-world.png",
+    imageUrl: "/images/home/fourth_section/save-the-world.png",
     imageAltText: "save the world",
     description: "Positive Impact",
   },
   {
-    imageUrl: "/images/power.png",
+    imageUrl: "/images/home/fourth_section/power.png",
     imageAltText: "power",
     description: "Sufficient Capacity",
   },
   {
-    imageUrl: "/images/statistics.png",
+    imageUrl: "/images/home/fourth_section/statistics.png",
     imageAltText: "statistics",
     description: "Minimal Drawdowns",
+  },
+];
+
+// sixth section blogData
+export const blogData: BlogCardProps[] = [
+  {
+    title: "Impact investment Market Outlook - 2023 and Beyond",
+    category: "Impact investment",
+    imageUrl: "/images/home/sixth_section/blog_1.webp",
+  },
+  {
+    title:
+      "Cultivating Impact: Demonstrating the Pivotal Role of Private Capital",
+    category: "Impact investment, Private Markets",
+    imageUrl: "/images/home/sixth_section/blog_2.webp",
+  },
+  {
+    title: "What is Impact Investment?",
+    category: "Impact investment",
+    imageUrl: "/images/home/sixth_section/blog_3.webp",
   },
 ];

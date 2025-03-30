@@ -8,19 +8,23 @@ export default function ListItemImageBox({
 }: IListItemImageBoxProps) {
   return (
     <li className="bg-white rounded-imageBox shadow-listItem-imagebox border border-theme-border-gray  p-6 w-full">
-      <div className="flex flex-row items-center gap-x-6 md:gap-x-8 xl:gap-x-12">
+      <div className="flex flex-col md:flex-row items-center gap-y-6 md:gap-x-8 xl:gap-x-12">
         {/* image */}
         <div className="max-w-[70px] max-h-[70px] w-full h-full">
           <img
-            className="w-full h-full object-contain"
+            className="w-full h-full object-contain object-center md:object-left"
             src={imageUrl}
             alt={imageAltText}
           />
         </div>
         {/* text */}
         <div className="flex flex-col gap-y-2">
-          <h5 className="text-primary-blue">{title}</h5>
-          <p className="text-b2 text-black">{description}</p>
+          <h5 className="text-primary-blue text-center md:text-left">
+            {title}
+          </h5>
+          <p className="text-b2 text-black text-center md:text-left">
+            {description}
+          </p>
         </div>
       </div>
     </li>

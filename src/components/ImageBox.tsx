@@ -1,4 +1,4 @@
-import { IImageBoxProps } from "../../types/types";
+import { IImageBoxProps } from "../types/types";
 
 function ImageBox({ imageUrl, imageAltText, description }: IImageBoxProps) {
   return (

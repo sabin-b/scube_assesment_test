@@ -1,36 +1,85 @@
+import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-
+import { IoIosArrowDown } from "react-icons/io";
+import { z } from "zod";
+import { cn } from "../lib/utils";
+import { CtaFormSchema } from "../schema/ctaForm";
 export default function CTAForm() {
-  const form = useForm();
+  const form = useForm<z.infer<typeof CtaFormSchema>>({
+    resolver: zodResolver(CtaFormSchema),
+    defaultValues: {
+      service: "",
+      email: "",
+    },
+  });
 
-  const { handleSubmit } = form;
+  const {
+    handleSubmit,
+    register,
+    formState: { errors },
+  } = form;
 
-  function handleFormData(params: type) {}
+  function handleFormData(data: z.infer<typeof CtaFormSchema>) {
+    console.log(data);
+  }
+
   return (
     <div>
       <form onSubmit={handleSubmit(handleFormData)}>
-        <div className="">
-          <div className="text-white">
-            <select
-              className="border border-white min-w-[380px] px-8 py-4 focus:outline-0 rounded-[9px]"
-              name=""
-              id=""
+        <div className="grid grid-cols-1 gap-y-6 md:grid-cols-2  md:gap-6  lg:grid-cols-[380px_1fr_1fr] lg:gap-x-4">
+          <div className="relative flex flex-col gap-y-1">
+            <div
+              className="
+           relative"
             >
-              <option value="service_1">service 1</option>
-              <option value="service_2">service 2</option>
-              <option value="service_3">service 3</option>
-              <option value="service_4">service 4</option>
-            </select>
-            <select
-              id="countries"
-              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              <select
+                className="appearance-none input"
+                {...register("service")}
+              >
+                <option value="" disabled>
+                  Select a service you are interested in
+                </option>
+                <option value="service_1">service 1</option>
+                <option value="service_2">service 2</option>
+                <option value="service_3">service 3</option>
+                <option value="service_4">service 4</option>
+              </select>
+              <div className="bg-secondary-dark-blue absolute right-5 top-1/2 -translate-y-1/2">
+                <IoIosArrowDown className="size-5 text-white" />
+              </div>
+            </div>
+            {errors?.service && (
+              <div className="">
+                <span className="text-b3 text-red-500">
+                  {errors?.service?.message}
+                </span>
+              </div>
+            )}
+          </div>
+          <div className="relative flex flex-col gap-y-1">
+            <input
+              {...register("email")}
+              className="input"
+              placeholder="Email address"
+              type="text"
+            />
+            {errors?.email && (
+              <div className="">
+                <span className="text-b3 text-red-500">
+                  {errors?.email?.message}
+                </span>
+              </div>
+            )}
+          </div>
+          <div className="relative md:col-span-2 lg:col-span-1">
+            <button
+              className={cn(
+                "btn-link bg-white text-overlay-blue hover:bg-secondary-medium-blue hover:text-white border-2 border-white hover:border-secondary-medium-blue w-full cursor-pointer"
+              )}
+              type="submit"
             >
-              <option selected>Choose a country</option>
-              <option value="US">United States</option>
-              <option value="CA">Canada</option>
-              <option value="FR">France</option>
-              <option value="DE">Germany</option>
-            </select>
+              Contact Us
+            </button>
           </div>
         </div>
       </form>

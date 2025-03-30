@@ -1,4 +1,4 @@
-import { IFloatingImageBoxProps } from "../../types/types";
+import { IFloatingImageBoxProps } from "../types/types";
 
 export default function FloatingImageBox({
   imageUrl,

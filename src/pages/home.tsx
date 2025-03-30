@@ -25,7 +25,7 @@ export default function Home() {
 
         {/* content */}
         <div className="container px-6 xl:px-0 max-w-7xl mx-auto relative z-10 h-full">
-          <div className="flex flex-col items-start gap-y-6">
+          <div className="flex flex-col items-start gap-y-5">
             <h1 className="text-white max-w-2xl">
               Scale up your Impact Investment
             </h1>
@@ -167,7 +167,7 @@ export default function Home() {
 
       {/* fifth section */}
       <section className="py-[100px] bg-theme-gray">
-        <div className="container relative z-10 px-6 xl:px-0 max-w-7xl mx-auto">
+        <div className="container relative  px-6 xl:px-0 max-w-7xl mx-auto">
           <div className="flex flex-col gap-y-10">
             <h2 className="text-primary-blue">
               Capital growth that benefits people and planet
@@ -369,7 +369,7 @@ export default function Home() {
 
       {/* sixth section */}
       <section className="py-[100px]">
-        <div className="container relative z-10 px-6 xl:px-0 max-w-7xl mx-auto">
+        <div className="container relative  px-6 xl:px-0 max-w-7xl mx-auto">
           <div className="flex flex-col gap-y-10">
             <h2 className="text-primary-blue">Our Latest Insights</h2>
             <div className="grid grid-cols-1 gap-y-8 md:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:gap-x-8 xl:gap-x-12">
@@ -390,11 +390,25 @@ export default function Home() {
 
       {/* seventh section */}
       <section className="py-[100px] bg-theme-gray">
-        <div className="container relative z-10 px-6 xl:px-0 max-w-7xl mx-auto">
+        <div className="container relative  px-6 xl:px-0 max-w-7xl mx-auto">
           {/* CTA */}
-          <div className="bg-secondary-dark-blue pt-12 pb-20 rounded-[20px]">
-            <div className="max-w-[900px] mx-auto">
-              <div className="flex flex-col gap-y-6 lg:gap-y-8">
+          <div className="bg-secondary-dark-blue z-0 overflow-clip relative px-8 pt-12 pb-20 rounded-[20px]">
+            <div className="absolute -z-1 right-0 top-0 h-[40%] max-h-[230px] md:max-h-[200px] lg:max-h-[330px] md:h-[50%] lg:h-[99%]">
+              <img
+                className="object-contain object-right-top  w-full h-full"
+                src="/images/home/seventh_section/cta_form_bg_2.png"
+                alt="cta_form_bg_2"
+              />
+            </div>
+            <div className="absolute -z-1 left-0 bottom-0 h-[40%] max-h-[230px] md:max-h-[200px] lg:max-h-[330px] md:h-[50%] lg:h-[99%]">
+              <img
+                className="object-contain object-right-top  w-full h-full"
+                src="/images/home/seventh_section/cta_form_bg_1.png"
+                alt="cta_form_bg_1"
+              />
+            </div>
+            <div className="max-w-[900px] z-10 mx-auto relative">
+              <div className="flex flex-col  gap-y-6 lg:gap-y-8 xl:gap-y-10">
                 <div className="flex flex-col space-y-4">
                   <h2 className="text-white text-center">
                     What are you interested in?

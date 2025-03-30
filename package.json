@@ -13,6 +13,7 @@
     "@hookform/resolvers": "^4.1.3",
     "@tailwindcss/vite": "^4.0.17",
     "clsx": "^2.1.1",
+    "dompurify": "^3.2.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-hook-form": "^7.55.0",
@@ -20,6 +21,7 @@
     "react-router-dom": "^7.4.0",
     "tailwind-merge": "^3.0.2",
     "tailwindcss": "^4.0.17",
+    "xss": "^1.0.15",
     "zod": "^3.24.2"
   },
   "devDependencies": {

@@ -1,3 +1,5 @@
+import { IconType } from "react-icons";
+
 export interface IImageBoxProps {
   imageUrl: string;
   imageAltText: string;
@@ -16,4 +18,23 @@ export type BlogCardProps = Omit<
 > & {
   title: string;
   category: string;
+};
+
+export interface SocialIconProps {
+  href: string;
+  Icon: IconType;
+}
+
+export interface FooterNavigationLinkProps {
+  href: string;
+  label: string;
+}
+
+export type DesktopHeaderNavLinksProps = FooterNavigationLinkProps & {
+  childLinks?: FooterNavigationLinkProps[];
+};
+
+export type MobileHeaderNavLinksProps = DesktopHeaderNavLinksProps & {
+  onClose?: () => void;
+  onChildOpen?: (label: string) => void;
 };

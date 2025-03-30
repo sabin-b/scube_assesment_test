@@ -1,4 +1,4 @@
-import { IListItemImageBoxProps } from "../../types/types";
+import { IListItemImageBoxProps } from "../types/types";
 
 export default function ListItemImageBox({
   imageUrl,

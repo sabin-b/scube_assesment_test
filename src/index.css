@@ -83,6 +83,12 @@
 
   /* fifth section */
   --bg-theme-gray: #f8fafc;
+
+  /* copyright text color */
+  --copyright-text: #545454;
+
+  /* mobile menu back btn color */
+  --mobile-back-btn-bg: #00428b;
 }
 
 @theme {
@@ -136,6 +142,13 @@
   --shadow-floating-imagebox: 0 24 54 0 #0000008c/55%;
   --shadow-listItem-imagebox: 0 4 4 -1 #0C0C0D0D/5%;
   --shadow-image-box: 0 4 4 -1 #0C0C0D0D/5%;
+  --shadow-mobile-menu: 0 4 20 0 #00000014/8%;
+
+  /* copyright text */
+  --color-copyright: var(--copyright-text);
+
+  /* mobile menu back btn bg */
+  --color-mobile-back-btn: var(--mobile-back-btn-bg);
 }
 
 @layer base {
@@ -191,5 +204,21 @@
 
   .link {
     @apply text-base flex flex-row items-center gap-x-3 font-inter leading-[28px] tracking-tight font-semibold text-secondary-light-blue hover:text-secondary-medium-blue transition-colors duration-100;
+  }
+
+  .input {
+    @apply border-2 text-white w-full border-white px-5 py-3 focus:outline-0 rounded-[9px]  bg-secondary-dark-blue text-base focus:ring-secondary-medium-blue focus:border-secondary-medium-blue block  placeholder:text-white/65;
+  }
+
+  .desktop_menu_navlink {
+    @apply font-inter relative font-semibold text-base leading-[100%] tracking-normal text-white pt-4 pl-0.5 inline-block transition-colors duration-500 ease-in-out  hover:text-secondary-light-blue  before:content-[''] before:w-full before:h-1 before:absolute before:top-0 before:left-0 before:bg-secondary-light-blue before:origin-left before:scale-x-0 before:transition-transform before:duration-500 hover:before:scale-x-100;
+  }
+
+  .desktop_menu_childLink {
+    @apply py-1.5 inline-block w-full h-full hover:text-secondary-light-blue text-black transition-colors duration-150 px-2 font-inter relative font-medium text-base leading-[150%] tracking-normal;
+  }
+
+  .mobile_menu_navLink {
+    @apply py-4 px-8 block w-full text-black hover:text-secondary-light-blue font-inter text-sm font-normal leading-[100%] tracking-normal;
   }
 }

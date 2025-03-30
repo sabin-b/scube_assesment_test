@@ -1,8 +1,11 @@
 import {
   BlogCardProps,
+  DesktopHeaderNavLinksProps,
+  FooterNavigationLinkProps,
   IFloatingImageBoxProps,
   IImageBoxProps,
   IListItemImageBoxProps,
+  MobileHeaderNavLinksProps,
 } from "../types/types";
 
 // data for second section
@@ -97,5 +100,125 @@ export const blogData: BlogCardProps[] = [
     title: "What is Impact Investment?",
     category: "Impact investment",
     imageUrl: "/images/home/sixth_section/blog_3.webp",
+  },
+];
+
+//  footer navigation
+export const footerNavLinks: FooterNavigationLinkProps[] = [
+  {
+    label: "Homepage",
+    href: "#",
+  },
+  {
+    label: "Resources",
+    href: "#",
+  },
+  {
+    label: "Contact Us",
+    href: "#",
+  },
+  {
+    label: "Privacy Policy",
+    href: "#",
+  },
+  {
+    label: "Terms of Use",
+    href: "#",
+  },
+];
+
+// header navigation (desktop)
+export const headerDesktopNavLinks: DesktopHeaderNavLinksProps[] = [
+  {
+    label: "Home",
+    href: "/",
+  },
+  {
+    label: "About Us",
+    href: "#",
+  },
+  {
+    label: "Investment",
+    href: "#",
+    childLinks: [
+      {
+        label: "Why Impactable?",
+        href: "#",
+      },
+      {
+        label: "Impactable EM products",
+        href: "#",
+      },
+    ],
+  },
+  {
+    label: "Impact Industry Building",
+    href: "#",
+    childLinks: [
+      {
+        label: "Impactable Network",
+        href: "#",
+      },
+      {
+        label: "Impactable Technical Assistance",
+        href: "#",
+      },
+    ],
+  },
+  {
+    label: "News & Insights",
+    href: "#",
+  },
+];
+
+// header navigation (mobile)
+export const headerMobileNavLinks: MobileHeaderNavLinksProps[] = [
+  {
+    label: "Home",
+    href: "/",
+  },
+  {
+    label: "About Us",
+    href: "#",
+  },
+  {
+    label: "Investment",
+    href: "#",
+    childLinks: [
+      {
+        label: "Why Impactable?",
+        href: "#",
+      },
+      {
+        label: "Impactable EM products",
+        href: "#",
+      },
+    ],
+  },
+  {
+    label: "Impact Industry Building",
+    href: "#",
+    childLinks: [
+      {
+        label: "Impactable Network",
+        href: "#",
+      },
+      {
+        label: "Impactable Technical Assistance",
+        href: "#",
+      },
+    ],
+  },
+  {
+    label: "News & Insights",
+    href: "#",
+  },
+  {
+    label: "Terms of Use",
+    href: "#",
+  },
+  {
+    label: "Privacy Policy",
+    href: "#",
   },
 ];
